@@ -1,6 +1,4 @@
 "use client"
-
-import Image from "next/image"
 import { motion } from "framer-motion"
 import { Calendar, MapPin, Building2 } from "lucide-react"
 
@@ -30,34 +28,44 @@ interface SkillsData {
 const timelineData: TimelineItem[] = [
   {
     id: 1,
+    title: "Intern AI-Developer",
+    institution: "MH Cognition",
+    period: "2025 - Present",
+    location: "Hyderabad, India",
+    type: "Work Experience",
+    logo: "/images/mh-cognition-logo.png", // Add the logo image to your public/images folder
+    skills: ["AI Development", "Machine Learning", "Deep Learning", "Computer Vision"],
+  },
+  {
+    id: 2,
     title: "B.Tech in Artificial Intelligence and Machine Learning",
     institution: "Malla Reddy University",
     period: "2021 - Present",
     location: "Hyderabad, India",
     type: "Education",
-    logo: "/malla-reddy-logo.svg",
+    logo: "/images/malla-reddy-logo.svg",
     achievements: ["CGPA: 8.03"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Intermediate (12th Board - MPC)",
     institution: "Narayana IIT Academy",
     period: "2019 - 2021",
     location: "Hyderabad, India",
     type: "Education",
-    logo: "/narayana-logo.svg",
+    logo: "/images/narayana-logo.svg",
     achievements: ["Percentage: 92%"],
   },
   {
-    id: 3,
+    id: 4,
     title: "High School (SSC)",
     institution: "Sri Chaitanya Techno Curriculum",
     period: "Until 2019",
     location: "Hyderabad, India",
     type: "Education",
-    logo: "/sri-chaitanya-logo.svg",
+    logo: "/images/sri-chaitanya-logo.svg",
     achievements: ["CGPA: 9.0"],
-  }
+  },
 ]
 
 const skillsData: SkillsData = {
@@ -101,18 +109,8 @@ export default function AboutMe() {
             <span className="ml-2">☕💻</span>
           </h2>
           {/* Profile Section */}
-          <div className="flex flex-col md:flex-row-reverse items-center gap-8 mb-16">
-            <div className="md:w-1/3">
-              <div className="relative w-64 h-64 mx-auto">
-                <Image
-                  src="/abhiram-photo.jpg"
-                  alt="Mukkawar Abhiram"
-                  fill
-                  className="rounded-lg object-cover shadow-lg"
-                />
-              </div>
-            </div>
-            <div className="md:w-2/3">
+          <div className="flex flex-col md:flex-row items-center gap-8 mb-16">
+            <div className="w-full">
               <div className="prose prose-invert max-w-none text-center md:text-left">
                 <p className="text-lg leading-relaxed md:hidden">
                   AI Enthusiast 🤖 and Full Stack Developer 💻. Crafting intelligent solutions with code and creativity.
@@ -164,15 +162,6 @@ export default function AboutMe() {
                   >
                     <div className="md:w-1/2 p-6 bg-gray-900/50 rounded-xl backdrop-blur-sm border border-gray-800">
                       <div className="flex flex-col md:flex-row items-center gap-4">
-                        <div className="w-16 h-16 md:w-12 md:h-12 rounded-full bg-gray-800 flex items-center justify-center overflow-hidden mb-4 md:mb-0 mx-auto md:mx-0">
-                          <Image
-                            src={item.logo || "/placeholder.svg"}
-                            alt={item.title}
-                            width={56}
-                            height={56}
-                            className="rounded-full"
-                          />
-                        </div>
                         <div className="text-center md:text-left">
                           <h3 className="text-xl font-bold text-white">{item.title}</h3>
                           <h4 className="text-lg text-purple-400">{item.institution}</h4>
@@ -219,30 +208,19 @@ export default function AboutMe() {
             </div>
           </div>
 
-          {/* Skills Section */}
-          <div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
-                Tech Toolbox
-              </span>
-              <span className="ml-2 text-white">⚔️</span>
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {Object.entries(skillsData).map(([category, skills]: [string, Skill[]]) => (
-                <div key={category} className="p-6 bg-gray-900/50 rounded-xl backdrop-blur-sm border border-gray-800">
-                  <h4 className="text-xl font-bold mb-4 text-purple-400 text-center md:text-left">{category}</h4>
-                  {skills.map((skill: Skill) => (
-                    <SkillBar key={skill.name} name={skill.name} proficiency={skill.proficiency} />
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
           {/* Certifications Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div className="p-6 bg-gray-900/50 rounded-xl backdrop-blur-sm border border-gray-800">
               <h4 className="text-xl font-bold mb-4 text-purple-400 text-center md:text-left">Certifications</h4>
               <ul className="space-y-2">
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                  <span className="text-gray-300">AWS Certified Cloud Practitioner</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                  <span className="text-gray-300">Cambridge English B2 First</span>
+                </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-purple-500"></div>
                   <span className="text-gray-300">Coursera - Deep Learning AI</span>
@@ -313,4 +291,3 @@ function SkillBar({ name, proficiency }: SkillBarProps) {
     </div>
   )
 }
-

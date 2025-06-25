@@ -1,21 +1,9 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import {
-  Github,
-  Linkedin,
-  Twitter,
-  FileText,
-  Blocks,
-  Cpu,
-  Braces,
-  MessageSquare,
-  Smartphone,
-  PenTool,
-} from "lucide-react"
+import { Github, Linkedin, FileText, Blocks, Cpu, Braces, Smartphone, PenTool } from "lucide-react"
 import { Link as ScrollLink } from "react-scroll"
 import CustomCursor from "@/components/custom-cursor"
 import Navbar from "@/components/navbar"
@@ -26,6 +14,42 @@ import Loading from "@/components/loading"
 import InteractiveShapes from "@/components/InteractiveShapes"
 import AnimatedBoxes from "@/components/AnimatedBoxes"
 
+// Define types for skills
+interface Skill {
+  name: string
+  proficiency: number
+}
+
+interface SkillsData {
+  [category: string]: Skill[]
+}
+
+const skillsData: SkillsData = {
+  "Programming Languages": [
+    { name: "Java", proficiency: 75 },
+    { name: "Python", proficiency: 90 },
+    { name: "JavaScript", proficiency: 70 },
+  ],
+  "Frameworks/Libraries": [
+    { name: "Django", proficiency: 90 },
+    { name: "React-Vite", proficiency: 85 },
+    { name: "React-Native", proficiency: 80 },
+    { name: "Flutter", proficiency: 80 },
+  ],
+  "AI & Machine Learning": [
+    { name: "Deep Learning", proficiency: 85 },
+    { name: "CNNs", proficiency: 80 },
+    { name: "Reinforcement Learning", proficiency: 85 },
+    { name: "Computer Vision", proficiency: 80 },
+    { name: "NLP", proficiency: 80 },
+  ],
+  Databases: [
+    { name: "MySQL", proficiency: 90 },
+    { name: "PostgreSQL", proficiency: 75 },
+    { name: "MongoDB", proficiency: 70 },
+  ],
+}
+
 export default function Home() {
   const [mounted, setMounted] = useState(false)
   const [loading, setLoading] = useState(true)
@@ -34,8 +58,7 @@ export default function Home() {
     setMounted(true)
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 2000) // Show loading for 2 seconds
-
+    }, 2000)
     return () => clearTimeout(timer)
   }, [])
 
@@ -44,7 +67,6 @@ export default function Home() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // You can add a console.log here if you want to verify it's working
     console.log("Form submission prevented")
   }
 
@@ -54,7 +76,7 @@ export default function Home() {
       <Navbar />
       <InteractiveShapes />
 
-      {/* Hero Section with Animated Boxes */}
+      {/* Hero Section */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <AnimatedBoxes />
         <div className="container relative z-10 px-4 mx-auto">
@@ -76,12 +98,12 @@ export default function Home() {
                   View Projects
                 </Button>
               </ScrollLink>
-              <ScrollLink to="contact" smooth={true} duration={500}>
+              <ScrollLink to="skills" smooth={true} duration={500}>
                 <Button
                   variant="outline"
                   className="bg-transparent border-2 border-purple-500 text-white hover:bg-purple-500 hover:text-white transition-all duration-300"
                 >
-                  Contact Me
+                  View Skills
                 </Button>
               </ScrollLink>
             </div>
@@ -93,6 +115,35 @@ export default function Home() {
       <section id="about" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container px-4 mx-auto">
           <AboutMe />
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="container px-4 mx-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
+                Tech Toolbox
+              </span>
+              <span className="ml-2 text-white">⚔️</span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {Object.entries(skillsData).map(([category, skills]: [string, Skill[]]) => (
+                <div key={category} className="p-6 bg-gray-900/50 rounded-xl backdrop-blur-sm border border-gray-800">
+                  <h4 className="text-xl font-bold mb-4 text-purple-400 text-center md:text-left">{category}</h4>
+                  {skills.map((skill: Skill) => (
+                    <SkillBar key={skill.name} name={skill.name} proficiency={skill.proficiency} />
+                  ))}
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -183,6 +234,11 @@ export default function Home() {
                 description="Designed an RL-based model to optimize garbage collection routes for smart cities."
                 tags={["Reinforcement Learning", "Optimization", "Smart Cities"]}
               />
+              <ProjectCard
+                title="Pollster App"
+                description="Created a polling application using Django and React-Vite that allows users to create polls and vote on them."
+                tags={["Django", "React-Vite", "JavaScript", "Web Development"]}
+              />
             </div>
           </motion.div>
         </div>
@@ -233,7 +289,6 @@ export default function Home() {
                           </a>
                         </div>
                       </div>
-
                       <div className="flex items-start gap-3">
                         <div className="mt-1 w-8 h-8 flex items-center justify-center rounded-full bg-purple-500/20">
                           <svg
@@ -261,7 +316,6 @@ export default function Home() {
                           </a>
                         </div>
                       </div>
-
                       <div className="flex items-start gap-3">
                         <div className="mt-1 w-8 h-8 flex items-center justify-center rounded-full bg-purple-500/20">
                           <svg
@@ -292,7 +346,6 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-
                   <div>
                     <h3 className="text-xl font-bold mb-4 text-white">Connect With Me</h3>
                     <div className="space-y-4">
@@ -312,7 +365,6 @@ export default function Home() {
                           </a>
                         </div>
                       </div>
-
                       <div className="flex items-start gap-3">
                         <div className="mt-1 w-8 h-8 flex items-center justify-center rounded-full bg-purple-500/20">
                           <Linkedin className="h-4 w-4 text-purple-400" />
@@ -329,7 +381,6 @@ export default function Home() {
                           </a>
                         </div>
                       </div>
-
                       <div className="flex items-start gap-3">
                         <div className="mt-1 w-8 h-8 flex items-center justify-center rounded-full bg-purple-500/20">
                           <FileText className="h-4 w-4 text-purple-400" />
@@ -355,13 +406,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer with Social Links */}
+      {/* Footer */}
       <footer className="py-12 bg-gradient-to-t from-gray-900 to-black">
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <SocialIcon icon={<Github />} href="https://github.com/mukkawarabhiram" label="GitHub" />
             <SocialIcon icon={<Linkedin />} href="https://linkedin.com/in/mukkawar-abhiram" label="LinkedIn" />
-            
           </div>
           <div className="text-center text-gray-500 text-sm">
             <p>© {new Date().getFullYear()} Mukkawar Abhiram. All rights reserved.</p>
@@ -373,6 +423,31 @@ export default function Home() {
           </div>
         </div>
       </footer>
+    </div>
+  )
+}
+
+// SkillBar Component
+interface SkillBarProps {
+  name: string
+  proficiency: number
+}
+
+function SkillBar({ name, proficiency }: SkillBarProps) {
+  return (
+    <div className="mb-4">
+      <div className="flex justify-between mb-1">
+        <span className="text-gray-300">{name}</span>
+        <span className="text-gray-400">{proficiency}%</span>
+      </div>
+      <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: `${proficiency}%` }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="h-full bg-gradient-to-r from-purple-500 to-pink-500"
+        />
+      </div>
     </div>
   )
 }
@@ -405,4 +480,3 @@ function ProjectCard({ title, description, tags, image }) {
     </div>
   )
 }
-
