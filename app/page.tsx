@@ -26,15 +26,16 @@ interface SkillsData {
 
 const skillsData: SkillsData = {
   "Programming Languages": [
-    { name: "Java", proficiency: 75 },
+    { name: "Java", proficiency: 85 },
     { name: "Python", proficiency: 90 },
-    { name: "JavaScript", proficiency: 70 },
+    { name: "JavaScript", proficiency: 75 },
   ],
   "Frameworks/Libraries": [
     { name: "Django", proficiency: 90 },
     { name: "React-Vite", proficiency: 85 },
     { name: "React-Native", proficiency: 80 },
     { name: "Flutter", proficiency: 80 },
+    { name: "Node.js", proficiency: 75 },
   ],
   "AI & Machine Learning": [
     { name: "Deep Learning", proficiency: 85 },
@@ -235,9 +236,21 @@ export default function Home() {
                 tags={["Reinforcement Learning", "Optimization", "Smart Cities"]}
               />
               <ProjectCard
-                title="Pollster App"
-                description="Created a polling application using Django and React-Vite that allows users to create polls and vote on them."
-                tags={["Django", "React-Vite", "JavaScript", "Web Development"]}
+                title="Pollster Web App"
+                description="A web application where users create and participate in polls. Includes AI-powered poll recommendations and NLP-based poll generation."
+                tags={["Django", "React-Vite", "AI", "NLP", "Web Development"]}
+              />
+              <ProjectCard
+                title="Role-Based Virtual Assistant"
+                description="Developed a context-aware assistant using NLP and Sentence Transformers to provide personalized support for students, teachers, and HODs within an educational system."
+                tags={["NLP", "AI", "Sentence Transformers", "Educational Technology"]}
+                href="https://github.com/abhiram3107/Virtual-Assistant"
+              />
+              <ProjectCard
+                title="DevGram App (Full Stack Social Platform)"
+                description="Created a social media app enabling users to post, comment, like, follow/unfollow with Django backend, React + Vite frontend, and React Native mobile app."
+                tags={["Django", "React", "Vite", "React Native", "Full Stack"]}
+                href="https://github.com/abhiram3107/DevConnect"
               />
             </div>
           </motion.div>
@@ -462,8 +475,8 @@ function ServiceCard({ icon, title, description }) {
   )
 }
 
-function ProjectCard({ title, description, tags, image }) {
-  return (
+function ProjectCard({ title, description, tags, image, href }) {
+  const CardContent = () => (
     <div className="p-6 rounded-lg bg-gray-900 border border-gray-800 hover:border-purple-500 transition-all duration-300">
       <h3 className="text-xl font-bold mb-3 text-white text-center md:text-left">{title}</h3>
       <p className="text-gray-400 mb-4 text-center md:text-left">{description}</p>
@@ -479,4 +492,19 @@ function ProjectCard({ title, description, tags, image }) {
       </div>
     </div>
   )
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block cursor-pointer transform hover:scale-105 transition-transform duration-300"
+      >
+        <CardContent />
+      </a>
+    )
+  }
+
+  return <CardContent />
 }

@@ -30,11 +30,11 @@ const timelineData: TimelineItem[] = [
     id: 1,
     title: "Intern AI-Developer",
     institution: "MH Cognition",
-    period: "2025 - Present",
+    period: "02/25 - 05/25",
     location: "Hyderabad, India",
     type: "Work Experience",
-    logo: "/images/mh-cognition-logo.png", // Add the logo image to your public/images folder
-    skills: ["AI Development", "Machine Learning", "Deep Learning", "Computer Vision"],
+    logo: "/images/mh-cognition-logo.png",
+    skills: ["AI Development", "Machine Learning", "Python", "TensorFlow", "NLP"],
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ const timelineData: TimelineItem[] = [
     location: "Hyderabad, India",
     type: "Education",
     logo: "/images/malla-reddy-logo.svg",
-    achievements: ["CGPA: 8.03"],
+    achievements: ["GPA: 8.13"],
   },
   {
     id: 3,
@@ -121,10 +121,9 @@ export default function AboutMe() {
                     🚀 <strong>Hey, I'm Mukkawar Abhiram!</strong>
                   </p>
                   <p className="mb-4">
-                    A <strong>dedicated and organized individual</strong> with{" "}
+                    A <strong>dedicated, organized, and methodical individual</strong> with{" "}
                     <strong>strong interpersonal skills</strong> and a proven ability to excel in team environments. I'm
-                    highly <strong>motivated and eager to learn</strong> new skills in the field of{" "}
-                    <strong>AI and Machine Learning</strong>.
+                    highly <strong>motivated and eager to learn and develop new skills</strong>.
                   </p>
                   <p className="mb-4">
                     Known for an <strong>active and dynamic approach</strong> to work, I consistently achieve results
@@ -208,7 +207,7 @@ export default function AboutMe() {
             </div>
           </div>
 
-          {/* Certifications Section */}
+          {/* Certifications and Extra-curricular Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div className="p-6 bg-gray-900/50 rounded-xl backdrop-blur-sm border border-gray-800">
               <h4 className="text-xl font-bold mb-4 text-purple-400 text-center md:text-left">Certifications</h4>
@@ -240,6 +239,29 @@ export default function AboutMe() {
               </ul>
             </div>
 
+            <div className="p-6 bg-gray-900/50 rounded-xl backdrop-blur-sm border border-gray-800">
+              <h4 className="text-xl font-bold mb-4 text-purple-400 text-center md:text-left">
+                Extra-Curricular Activities
+              </h4>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                  <span className="text-gray-300">AI Research & Papers - Published AI-related papers</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                  <span className="text-gray-300">Hackathons - AI/ML hackathons at Malla Reddy University</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                  <span className="text-gray-300">Webinars - ThoughtfulWorks on GenAI, T-Hub</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Languages Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div className="p-6 bg-gray-900/50 rounded-xl backdrop-blur-sm border border-gray-800">
               <h4 className="text-xl font-bold mb-4 text-purple-400 text-center md:text-left">Languages</h4>
               <ul className="space-y-2">
