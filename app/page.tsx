@@ -239,6 +239,7 @@ export default function Home() {
                 title="Pollster Web App"
                 description="A web application where users create and participate in polls. Includes AI-powered poll recommendations and NLP-based poll generation."
                 tags={["Django", "React-Vite", "AI", "NLP", "Web Development"]}
+                href="https://github.com/abhiram3107/voting-system-backend"
               />
               <ProjectCard
                 title="Role-Based Virtual Assistant"
