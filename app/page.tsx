@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Github, Linkedin, FileText, Blocks, Cpu, Braces, Smartphone, PenTool } from "lucide-react"
+import { Github, Linkedin, FileText, Blocks, Cpu, Braces, Smartphone, PenTool } from 'lucide-react'
 import { Link as ScrollLink } from "react-scroll"
 import CustomCursor from "@/components/custom-cursor"
 import Navbar from "@/components/navbar"
@@ -29,17 +29,32 @@ const skillsData: SkillsData = {
     { name: "Java", proficiency: 85 },
     { name: "Python", proficiency: 90 },
     { name: "JavaScript", proficiency: 75 },
+    { name: "TypeScript", proficiency: 80 },
   ],
   "Frameworks/Libraries": [
     { name: "Django", proficiency: 90 },
+    { name: "FastAPI", proficiency: 85 },
+    { name: "Node.js", proficiency: 85 },
+    { name: "Express", proficiency: 80 },
     { name: "React-Vite", proficiency: 85 },
     { name: "React-Native", proficiency: 80 },
     { name: "Flutter", proficiency: 80 },
-    { name: "Node.js", proficiency: 75 },
+  ],
+  "Real-time & Communication": [
+    { name: "LiveKit", proficiency: 75 },
+    { name: "Twilio", proficiency: 75 },
+    { name: "WebSockets", proficiency: 80 },
+    { name: "REST APIs", proficiency: 85 },
+  ],
+  "Cloud & Infrastructure": [
+    { name: "AWS (Lambda, API Gateway, S3)", proficiency: 80 },
+    { name: "Docker", proficiency: 75 },
+    { name: "CI/CD (GitHub Actions)", proficiency: 75 },
   ],
   "AI & Machine Learning": [
     { name: "Deep Learning", proficiency: 85 },
-    { name: "CNNs", proficiency: 80 },
+    { name: "Agentic AI", proficiency: 80 },
+    { name: "LLM Integration", proficiency: 85 },
     { name: "Reinforcement Learning", proficiency: 85 },
     { name: "Computer Vision", proficiency: 80 },
     { name: "NLP", proficiency: 80 },
@@ -217,41 +232,36 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ProjectCard
                 title="Login System using Django"
-                description="Implemented a secure authentication system with Django, including user roles and session management."
-                tags={["Django", "Python", "Authentication", "Web Development"]}
-              />
-              <ProjectCard
-                title="Pneumonia Detection"
-                description="Developed an AI system using CNNs to classify pneumonia from X-ray images."
-                tags={["AI", "Python", "CNN", "Medical Imaging"]}
-              />
-              <ProjectCard
-                title="Lung Disease Detection"
-                description="Built a deep learning model to detect lung diseases from medical images."
-                tags={["Deep Learning", "Medical AI", "Python"]}
+                description="Engineered a secure, production-ready authentication system with Django, featuring role-based access control, robust session management, and protection against common web vulnerabilities."
+                tags={["Django", "Python", "Authentication", "Security"]}
               />
               <ProjectCard
                 title="Garbage Collection using RL"
-                description="Designed an RL-based model to optimize garbage collection routes for smart cities."
+                description="Designed and implemented an RL-driven optimization model for smart-city garbage collection, minimizing route cost and improving operational efficiency through intelligent decision-making."
                 tags={["Reinforcement Learning", "Optimization", "Smart Cities"]}
               />
               <ProjectCard
                 title="Pollster Web App"
-                description="A web application where users create and participate in polls. Includes AI-powered poll recommendations and NLP-based poll generation."
-                tags={["Django", "React-Vite", "AI", "NLP", "Web Development"]}
+                description="Built an interactive polling platform where users can create, share, and vote on polls, enhanced with AI-powered poll recommendations and NLP-based automatic poll generation for higher engagement."
+                tags={["Django", "React-Vite", "AI", "NLP"]}
                 href="https://github.com/abhiram3107/voting-system-backend"
               />
               <ProjectCard
                 title="Role-Based Virtual Assistant"
                 description="Developed a context-aware assistant using NLP and Sentence Transformers to provide personalized support for students, teachers, and HODs within an educational system."
-                tags={["NLP", "AI", "Sentence Transformers", "Educational Technology"]}
+                tags={["NLP", "AI", "Sentence Transformers", "Education"]}
                 href="https://github.com/abhiram3107/Virtual-Assistant"
               />
               <ProjectCard
                 title="DevGram App (Full Stack Social Platform)"
                 description="Created a social media app enabling users to post, comment, like, follow/unfollow with Django backend, React + Vite frontend, and React Native mobile app."
-                tags={["Django", "React", "Vite", "React Native", "Full Stack"]}
+                tags={["Django", "React", "Vite", "React Native"]}
                 href="https://github.com/abhiram3107/DevConnect"
+              />
+              <ProjectCard
+                title="Doubt Solver AI"
+                description="Built an intelligent Q&A system that answers subject-specific queries by understanding and retrieving answers from custom-trained academic material using semantic search."
+                tags={["AI", "RAG", "Semantic Search", "Education"]}
               />
             </div>
           </motion.div>
@@ -343,13 +353,7 @@ export default function Home() {
                               strokeLinecap="round"
                               strokeLinejoin="round"
                               strokeWidth={2}
-                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                            />
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                              d="M17.657 16.657L13.414 20.9a2 2 0 01-2.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                             />
                           </svg>
                         </div>

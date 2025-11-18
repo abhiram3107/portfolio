@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import { Calendar, MapPin, Building2 } from "lucide-react"
+import { Calendar, MapPin, Building2 } from 'lucide-react'
 
 // Define types for timeline items
 interface TimelineItem {
@@ -28,16 +28,25 @@ interface SkillsData {
 const timelineData: TimelineItem[] = [
   {
     id: 1,
+    title: "AI + Data Engineer",
+    institution: "Lakhi Information Technologies Inc",
+    period: "18/08/2025 - Present",
+    location: "Remote/Hyderabad, India",
+    type: "Work Experience",
+    skills: ["Node.js", "AWS", "Agentic AI", "LLMs", "Kafka", "LiveKit", "Twilio"],
+  },
+  {
+    id: 2,
     title: "Intern AI-Developer",
     institution: "MH Cognition",
-    period: "02/25 - 05/25",
+    period: "10/02/2025 - 10/05/2025",
     location: "Hyderabad, India",
     type: "Work Experience",
     logo: "/images/mh-cognition-logo.png",
     skills: ["AI Development", "Machine Learning", "Python", "TensorFlow", "NLP"],
   },
   {
-    id: 2,
+    id: 3,
     title: "B.Tech in Artificial Intelligence and Machine Learning",
     institution: "Malla Reddy University",
     period: "2021 - Present",
@@ -47,7 +56,7 @@ const timelineData: TimelineItem[] = [
     achievements: ["GPA: 8.13"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Intermediate (12th Board - MPC)",
     institution: "Narayana IIT Academy",
     period: "2019 - 2021",
@@ -57,7 +66,7 @@ const timelineData: TimelineItem[] = [
     achievements: ["Percentage: 92%"],
   },
   {
-    id: 4,
+    id: 5,
     title: "High School (SSC)",
     institution: "Sri Chaitanya Techno Curriculum",
     period: "Until 2019",
@@ -72,23 +81,42 @@ const skillsData: SkillsData = {
   "Programming Languages": [
     { name: "Java", proficiency: 85 },
     { name: "Python", proficiency: 90 },
+    { name: "JavaScript", proficiency: 75 },
+    { name: "TypeScript", proficiency: 80 },
   ],
-  "Frameworks/Libraries": [
+  "Frameworks & Technologies": [
     { name: "Django", proficiency: 90 },
+    { name: "FastAPI", proficiency: 85 },
+    { name: "Node.js", proficiency: 85 },
+    { name: "Express", proficiency: 80 },
     { name: "React-Vite", proficiency: 85 },
     { name: "React-Native", proficiency: 80 },
     { name: "Flutter", proficiency: 80 },
   ],
+  "Real-time & Communication": [
+    { name: "LiveKit", proficiency: 75 },
+    { name: "Twilio", proficiency: 75 },
+    { name: "WebSockets", proficiency: 80 },
+    { name: "Webhooks", proficiency: 75 },
+  ],
+  "Cloud & Infrastructure": [
+    { name: "AWS Lambda", proficiency: 80 },
+    { name: "AWS API Gateway", proficiency: 80 },
+    { name: "AWS S3", proficiency: 80 },
+    { name: "Docker", proficiency: 75 },
+    { name: "CI/CD (GitHub Actions)", proficiency: 75 },
+  ],
   "AI & Machine Learning": [
     { name: "Deep Learning", proficiency: 85 },
-    { name: "CNNs", proficiency: 80 },
+    { name: "Agentic AI", proficiency: 80 },
+    { name: "LLM Integration", proficiency: 85 },
     { name: "Reinforcement Learning", proficiency: 85 },
-    { name: "Computer Vision", proficiency: 80 },
     { name: "NLP", proficiency: 80 },
   ],
   Databases: [
     { name: "MySQL", proficiency: 90 },
     { name: "PostgreSQL", proficiency: 75 },
+    { name: "MongoDB", proficiency: 70 },
   ],
 }
 
