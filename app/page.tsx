@@ -417,7 +417,7 @@ export default function Home() {
                         <div>
                           <p className="text-gray-400 text-sm">Resume</p>
                           <a
-                            href="https://docs.google.com/document/d/1d1jMseRaoWFnxS0bZAKgfl4-Ah0JqoUaDHNyuMh7NhE/edit?usp=sharing"
+                            href="https://docs.google.com/document/d/1zx3bAD2tCaONh-bU-mj7Mk775mI1FbP32KPzex_ooEs/edit?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-white hover:text-purple-400 transition-colors"
