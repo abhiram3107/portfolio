@@ -28,28 +28,28 @@ interface SkillsData {
 const timelineData: TimelineItem[] = [
   {
     id: 1,
-    title: "AI + Data Engineer",
-    institution: "Lakhi Information Technologies Inc",
-    period: "18/08/2025 - Present",
-    location: "Remote/Hyderabad, India",
+    title: "AI + Full-Stack Developer",
+    institution: "Lakhi Information Technologies",
+    period: "Aug 2025 - Present",
+    location: "Hyderabad, India",
     type: "Work Experience",
-    skills: ["Node.js", "AWS", "Agentic AI", "LLMs", "Kafka", "LiveKit", "Twilio"],
+    skills: ["Agentic AI", "Kafka", "OpenTelemetry", "REST APIs", "WebSockets", "Fastify", "React", "React Native"],
   },
   {
     id: 2,
-    title: "Intern AI-Developer",
-    institution: "MH Cognition",
-    period: "10/02/2025 - 10/05/2025",
+    title: "AI / ML Intern",
+    institution: "MHCognition",
+    period: "Jan 2025 - May 2025",
     location: "Hyderabad, India",
     type: "Work Experience",
     logo: "/images/mh-cognition-logo.png",
-    skills: ["AI Development", "Machine Learning", "Python", "TensorFlow", "NLP"],
+    skills: ["AI Assistants", "Python", "TensorFlow", "NLP", "Applied ML"],
   },
   {
     id: 3,
     title: "B.Tech in Artificial Intelligence and Machine Learning",
     institution: "Malla Reddy University",
-    period: "2021 - Present",
+    period: "2021 - 2025",
     location: "Hyderabad, India",
     type: "Education",
     logo: "/images/malla-reddy-logo.svg",
@@ -79,44 +79,49 @@ const timelineData: TimelineItem[] = [
 
 const skillsData: SkillsData = {
   "Programming Languages": [
-    { name: "Java", proficiency: 85 },
     { name: "Python", proficiency: 90 },
+    { name: "Java", proficiency: 85 },
     { name: "JavaScript", proficiency: 75 },
-    { name: "TypeScript", proficiency: 80 },
   ],
-  "Frameworks & Technologies": [
+  "Web Frameworks": [
     { name: "Django", proficiency: 90 },
-    { name: "FastAPI", proficiency: 85 },
-    { name: "Node.js", proficiency: 85 },
+    { name: "Fastify", proficiency: 85 },
     { name: "Express", proficiency: 80 },
     { name: "React-Vite", proficiency: 85 },
-    { name: "React-Native", proficiency: 80 },
-    { name: "Flutter", proficiency: 80 },
   ],
-  "Real-time & Communication": [
+  "AI / ML": [
+    { name: "Agentic AI", proficiency: 85 },
+    { name: "A2A Communication", proficiency: 80 },
+    { name: "RAG", proficiency: 80 },
+    { name: "NLP", proficiency: 80 },
+    { name: "Deep Learning", proficiency: 85 },
+    { name: "Reinforcement Learning", proficiency: 85 },
+  ],
+  "Messaging & Real-time": [
+    { name: "Kafka", proficiency: 85 },
+    { name: "WebSockets", proficiency: 85 },
+    { name: "REST APIs", proficiency: 85 },
     { name: "LiveKit", proficiency: 75 },
     { name: "Twilio", proficiency: 75 },
-    { name: "WebSockets", proficiency: 80 },
-    { name: "Webhooks", proficiency: 75 },
+    { name: "Webhooks", proficiency: 80 },
   ],
-  "Cloud & Infrastructure": [
-    { name: "AWS Lambda", proficiency: 80 },
-    { name: "AWS API Gateway", proficiency: 80 },
-    { name: "AWS S3", proficiency: 80 },
+  "Observability & Cloud": [
+    { name: "OpenTelemetry", proficiency: 80 },
+    { name: "Prometheus", proficiency: 75 },
+    { name: "Grafana", proficiency: 75 },
+    { name: "AWS", proficiency: 80 },
     { name: "Docker", proficiency: 75 },
     { name: "CI/CD (GitHub Actions)", proficiency: 75 },
   ],
-  "AI & Machine Learning": [
-    { name: "Deep Learning", proficiency: 85 },
-    { name: "Agentic AI", proficiency: 80 },
-    { name: "LLM Integration", proficiency: 85 },
-    { name: "Reinforcement Learning", proficiency: 85 },
-    { name: "NLP", proficiency: 80 },
-  ],
   Databases: [
+    { name: "PostgreSQL", proficiency: 85 },
     { name: "MySQL", proficiency: 90 },
-    { name: "PostgreSQL", proficiency: 75 },
     { name: "MongoDB", proficiency: 70 },
+  ],
+  "Frontend & Mobile": [
+    { name: "React", proficiency: 85 },
+    { name: "React Native", proficiency: 80 },
+    { name: "TypeScript", proficiency: 80 },
   ],
 }
 
@@ -146,21 +151,19 @@ export default function AboutMe() {
                 </p>
                 <div className="hidden md:block">
                   <p className="text-xl mb-4">
-                    🚀 <strong>Hey, I'm Mukkawar Abhiram!</strong>
+                    🚀 <strong>AI and full-stack developer</strong> building agentic AI products and scalable systems
                   </p>
                   <p className="mb-4">
-                    A <strong>dedicated, organized, and methodical individual</strong> with{" "}
-                    <strong>strong interpersonal skills</strong> and a proven ability to excel in team environments. I'm
-                    highly <strong>motivated and eager to learn and develop new skills</strong>.
+                    I work across <strong>Python, Java, JavaScript, Django, MERN, and Fastify</strong> to deliver{" "}
+                    <strong>AI-powered booking flows, omnichannel communication systems, and cross-platform applications</strong>.
+                    Experienced in building systems spanning <strong>5 customer channels, 4 specialized A2A agents, 3 service domains, and 2 client applications</strong>.
                   </p>
                   <p className="mb-4">
-                    Known for an <strong>active and dynamic approach</strong> to work, I consistently achieve results
-                    and meet deadlines. I demonstrate <strong>determination and decisiveness</strong>, actively seeking
-                    opportunities to collaborate with others and enhance my skill sets through teamwork.
+                    My expertise includes <strong>Agentic AI, A2A Communication, RAG, NLP, Kafka, WebSockets, REST APIs, Fastify, and observability tools like OpenTelemetry, Prometheus, and Grafana</strong>.
+                    I'm passionate about <strong>building distributed systems, real-time communication services, and AI-enabled workflows</strong>.
                   </p>
                   <p>
-                    Let's <strong>collaborate and create something amazing</strong>—because I believe in the power of{" "}
-                    <strong>teamwork and innovation</strong>! ⚡🔥
+                    Let's <strong>collaborate and create intelligent solutions</strong> that drive real impact! ⚡🔥
                   </p>
                 </div>
               </div>
@@ -242,27 +245,19 @@ export default function AboutMe() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                  <span className="text-gray-300">AWS Certified Cloud Practitioner</span>
+                  <span className="text-gray-300">AWS Academy Graduate - Cloud Foundations</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                  <span className="text-gray-300">Cambridge English B2 First</span>
+                  <span className="text-gray-300">AWS Academy Graduate - Machine Learning Foundations</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                  <span className="text-gray-300">Coursera - Deep Learning AI</span>
+                  <span className="text-gray-300">DeepLearning.AI - AI for Everyone</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                  <span className="text-gray-300">MyCaptain - Python Programming</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                  <span className="text-gray-300">EduVetha - Full Stack Using JAVA</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                  <span className="text-gray-300">Full Stack Development Using Django And React</span>
+                  <span className="text-gray-300">Python Programming</span>
                 </li>
               </ul>
             </div>
@@ -274,15 +269,15 @@ export default function AboutMe() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                  <span className="text-gray-300">AI Research & Papers - Published AI-related papers</span>
+                  <span className="text-gray-300">AI Research & Papers</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                  <span className="text-gray-300">Hackathons - AI/ML hackathons at Malla Reddy University</span>
+                  <span className="text-gray-300">Hackathons</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                  <span className="text-gray-300">Webinars - ThoughtfulWorks on GenAI, T-Hub</span>
+                  <span className="text-gray-300">Webinars</span>
                 </li>
               </ul>
             </div>

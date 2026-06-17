@@ -231,37 +231,26 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ProjectCard
-                title="Login System using Django"
-                description="Engineered a secure, production-ready authentication system with Django, featuring role-based access control, robust session management, and protection against common web vulnerabilities."
-                tags={["Django", "Python", "Authentication", "Security"]}
-              />
-              <ProjectCard
-                title="Garbage Collection using RL"
-                description="Designed and implemented an RL-driven optimization model for smart-city garbage collection, minimizing route cost and improving operational efficiency through intelligent decision-making."
-                tags={["Reinforcement Learning", "Optimization", "Smart Cities"]}
-              />
-              <ProjectCard
-                title="Pollster Web App"
-                description="Built an interactive polling platform where users can create, share, and vote on polls, enhanced with AI-powered poll recommendations and NLP-based automatic poll generation for higher engagement."
-                tags={["Django", "React-Vite", "AI", "NLP"]}
-                href="https://github.com/abhiram3107/voting-system-backend"
-              />
-              <ProjectCard
-                title="Role-Based Virtual Assistant"
-                description="Developed a context-aware assistant using NLP and Sentence Transformers to provide personalized support for students, teachers, and HODs within an educational system."
-                tags={["NLP", "AI", "Sentence Transformers", "Education"]}
-                href="https://github.com/abhiram3107/Virtual-Assistant"
-              />
-              <ProjectCard
-                title="DevGram App (Full Stack Social Platform)"
-                description="Created a social media app enabling users to post, comment, like, follow/unfollow with Django backend, React + Vite frontend, and React Native mobile app."
-                tags={["Django", "React", "Vite", "React Native"]}
+                title="DevGram"
+                description="Full-stack social platform with web and mobile experiences, backend APIs, and role-aware user flows built with Django, React, and React Native."
+                tags={["Django", "React", "React Native"]}
                 href="https://github.com/abhiram3107/DevConnect"
               />
               <ProjectCard
                 title="Doubt Solver AI"
-                description="Built an intelligent Q&A system that answers subject-specific queries by understanding and retrieving answers from custom-trained academic material using semantic search."
-                tags={["AI", "RAG", "Semantic Search", "Education"]}
+                description="Subject-aware Q&A system that returns context-relevant answers for student queries using semantic search over course material."
+                tags={["Python", "NLP", "Semantic Search"]}
+              />
+              <ProjectCard
+                title="Role-Based Virtual Assistant"
+                description="Multi-role assistant that delivers tailored responses for students, teachers, and academic administrators using Python and NLP techniques."
+                tags={["Python", "NLP"]}
+                href="https://github.com/abhiram3107/Virtual-Assistant"
+              />
+              <ProjectCard
+                title="RL Garbage Collection Optimizer"
+                description="Reinforcement learning route optimizer designed for smart-city garbage collection scenarios to minimize costs and improve efficiency."
+                tags={["Python", "Reinforcement Learning"]}
               />
             </div>
           </motion.div>
