@@ -263,6 +263,17 @@ export default function Home() {
                 description="Built an intelligent Q&A system that answers subject-specific queries by understanding and retrieving answers from custom-trained academic material using semantic search."
                 tags={["AI", "RAG", "Semantic Search", "Education"]}
               />
+              <ProjectCard
+                title="DevGram"
+                description="Full-stack social platform with web and mobile experiences, backend APIs, and role-aware user flows built with Django, React, and React Native."
+                tags={["Django", "React", "React Native"]}
+                href="https://github.com/abhiram3107/DevConnect"
+              />
+              <ProjectCard
+                title="RL Garbage Collection Optimizer"
+                description="Reinforcement learning route optimizer designed for smart-city garbage collection scenarios to minimize costs and improve efficiency."
+                tags={["Python", "Reinforcement Learning"]}
+              />
             </div>
           </motion.div>
         </div>
@@ -406,7 +417,7 @@ export default function Home() {
                         <div>
                           <p className="text-gray-400 text-sm">Resume</p>
                           <a
-                            href="https://docs.google.com/document/d/1d1jMseRaoWFnxS0bZAKgfl4-Ah0JqoUaDHNyuMh7NhE/edit?usp=sharing"
+                            href="https://docs.google.com/document/d/1zx3bAD2tCaONh-bU-mj7Mk775mI1FbP32KPzex_ooEs/edit?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-white hover:text-purple-400 transition-colors"
